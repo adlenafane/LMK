@@ -1,0 +1,23 @@
+<template name="askQuestion">
+  <form class="main">
+    <div class="control-group">
+        <label class="control-label" for="recipient">Recipient</label>
+        <div class="controls">
+            <input name="recipient" type="text" value="" placeholder="Who is this question for?"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="question">Your question:</label>
+        <div class="controls">
+            <textarea name="question" type="text" value=""/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
+    </div>
+  </form>
+</template>
