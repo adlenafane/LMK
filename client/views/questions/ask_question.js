@@ -7,7 +7,12 @@ Template.askQuestion.events({
             question: $(e.target).find('[name=question]').val(),
         };
 
-        question._id = Questions.insert(question);
-        Router.go('questionsList');
+        Meteor.call('question', question, function(error, id) {
+            if (error) {
+                return alert(error);
+            }
+
+            Router.go('questionsList');
+        });
     }
 });

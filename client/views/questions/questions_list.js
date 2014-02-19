@@ -1,5 +1,5 @@
 Template.questionsList.helpers({
     questions: function() {
-        return Questions.find();
+        return Questions.find({}, {askedDate: -1});
     }
 });
