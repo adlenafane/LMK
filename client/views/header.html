@@ -4,6 +4,7 @@
             <a class="brand" href="{{ pathFor 'questionsList'}}">Let Me Know!</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
+                  {{#if currentUser}}<li><a href="{{pathFor 'askedQuestions'}}">Asked</a></li> {{/if}}
                   {{#if currentUser}}<li><a href="{{pathFor 'askQuestion'}}">Ask</a></li> {{/if}}
                 </ul>
             <ul class="nav pull-right">
