@@ -1,2 +1,0 @@
-Template.questionItem.helpers({
-});
