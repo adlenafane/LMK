@@ -8,6 +8,5 @@ Template.questionsList.helpers({
             },
             { askedDate: -1 }
         );
-        // return Questions.find({}, {askedDate: -1});
     }
 });
