@@ -17,7 +17,7 @@ Meteor.methods({
         }
 
         var question = _.extend(_.pick(questionAttributes, 'recipient', 'question'), {
-            userId: user._id,
+            authorId: user._id,
             author: user.emails[0]['address'],
             askedDate: new Date().getTime()
         })
