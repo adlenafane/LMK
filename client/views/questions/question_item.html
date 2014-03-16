@@ -1,8 +1,9 @@
 <template name="questionItem">
     <div class="question">
         <div class="question-content">
-            <h3><strong>{{question}}</strong></h3>
+            <h3><strong><a href="{{pathFor 'questionPage'}}">{{question}}</a></strong></h3>
             <div>By <strong>{{author}}</strong> for {{recipient}}</div>
         </div>
+        <a href="{{pathFor 'questionPage'}}" class="discuss btn">Discuss</a>
     </div>
 </template>
