@@ -1,4 +1,4 @@
-.grid-block, .main, .question, .comments li, .comment-form {
+.grid-block, .main, .question, .answers li, .answer-form {
     background: #fff;
     border-radius: 3px;
     padding: 10px;
@@ -57,20 +57,20 @@ body {
     float: right;
     margin-top: 7px;
 }
-.comments {
+.answers {
     list-style-type: none;
     margin: 0;
 }
-.comments li h4 {
+.answers li h4 {
     font-size: 16px;
     margin: 0;
 }
-.comments li h4 .date {
+.answers li h4 .date {
     font-size: 12px;
     font-weight: normal;
 }
-.comments li h4 a { font-size: 12px }
-.comments li p:last-child { margin-bottom: 0 }
+.answers li h4 a { font-size: 12px }
+.answers li p:last-child { margin-bottom: 0 }
 .dropdown-menu span {
     display: block;
     padding: 3px 20px;
