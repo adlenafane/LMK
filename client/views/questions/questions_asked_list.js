@@ -1,5 +1,5 @@
 Template.questionsAskedList.helpers({
     questions: function() {
-        return Questions.find({userId: '' + Meteor.userId()}, {askedDate: -1});
+        return Questions.find({authorId: '' + Meteor.userId()}, {askedDate: -1});
     }
 });
