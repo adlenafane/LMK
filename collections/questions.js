@@ -19,7 +19,8 @@ Meteor.methods({
         var question = _.extend(_.pick(questionAttributes, 'recipient', 'question'), {
             authorId: user._id,
             author: user.emails[0]['address'],
-            askedDate: new Date().getTime()
+            submitted: new Date().getTime(),
+            answersCount: 0
         })
 
         var questionId = Questions.insert(question);
