@@ -1,0 +1,9 @@
+<template name="questionPage">
+    {{> questionItem}}
+    <ul class="answers">
+        {{#each answers}}
+            {{> answer}}
+        {{/each}}
+    </ul>
+    {{> answerSubmit}}
+</template>
