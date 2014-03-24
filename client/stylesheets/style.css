@@ -1,4 +1,4 @@
-.grid-block, .main, .question, .answers li, .answer-form {
+.grid-block, .main, .question, .answers li, .answer form {
     background: #fff;
     border-radius: 3px;
     padding: 10px;
@@ -9,12 +9,44 @@ body {
     background: #eee;
     color: #666666;
 }
-.navbar { margin-bottom: 10px }
-.navbar .navbar-inner {
-    border-radius: 0px 0px 3px 3px;
-}
 #spinner { height: 300px }
-.question {
+
+.load-more {
+    display: block;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+.load-more:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+a {
+    color: inherit;
+}
+a:hover {
+     text-decoration:none;
+}
+
+/** Navbar **/
+.navbar { margin-bottom: 10px }
+    .navbar .navbar-inner {
+        border-radius: 0px 0px 3px 3px;
+    }
+        .dropdown-menu span {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            line-height: 20px;
+            color: #bbb;
+            white-space: nowrap;
+        }
+
+/** Questions **/
+.question, .answer {
     *zoom: 1;
     -webkit-transition: all 300ms 0ms;
     -webkit-transition-delay: ease-in;
@@ -57,44 +89,23 @@ body {
     float: right;
     margin-top: 7px;
 }
+
+/** Anwers **/
 .answers {
     list-style-type: none;
     margin: 0;
 }
-.answers li h4 {
-    font-size: 16px;
-    margin: 0;
-}
-.answers li h4 .date {
-    font-size: 12px;
-    font-weight: normal;
-}
-.answers li h4 a { font-size: 12px }
-.answers li p:last-child { margin-bottom: 0 }
-.dropdown-menu span {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    line-height: 20px;
-    color: #bbb;
-    white-space: nowrap;
-}
-.load-more {
-    display: block;
-    border-radius: 3px;
-    background: rgba(0, 0, 0, 0.05);
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-    margin-bottom: 10px;
-}
-.load-more:hover {
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.1);
-}
-a {
-    color: inherit;
-}
-a:hover {
-     text-decoration:none;
-}
+    .answers li h4 {
+        font-size: 16px;
+        margin: 0;
+    }
+        .answers li h4 .date {
+            font-size: 12px;
+            font-weight: normal;
+        }
+            .answers li h4 a { font-size: 12px }
+            .answers li p:last-child { margin-bottom: 0 }
+    .answer form textarea {
+        width: 100%;
+        padding: 0;
+    }
