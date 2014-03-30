@@ -1,4 +1,4 @@
-.grid-block, .main, .question, .answers li, .answer form {
+.grid-block, .ask-question, .question, .answers li, .answer form {
     background: #fff;
     border-radius: 3px;
     padding: 10px;
@@ -48,11 +48,7 @@ a:hover {
 }
 .question:after { clear: both }
 .question.invisible { opacity: 0 }
-.question .upvote {
-    display: block;
-    margin: 7px 12px 0 0;
-    float: left;
-}
+
 .question .question-content { float: left }
 .question .question-content h3 {
     margin: 0;
@@ -74,6 +70,21 @@ a:hover {
     display: block;
     float: right;
     margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.ask-question input[type="submit"] {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.ask-question .control-group {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.ask-question .control-group input {
+    width: 100%;
 }
 
 /** Answers **/
