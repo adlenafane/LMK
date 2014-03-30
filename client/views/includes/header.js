@@ -10,3 +10,19 @@ Template.header.helpers({
     return active && 'active';
   }
 });
+
+Template.header.events({
+    'click #add-contact': function() {
+        bootbox.prompt("Enter the email of your contact", function(contact) {
+            if (contact !== null) {
+                Meteor.call('addContact', contact, function(error, id) {
+                    if (error) {
+                        return alert(error);
+                    }
+
+                    Router.go('questionsList');
+                })
+            }
+        });
+    }
+});
