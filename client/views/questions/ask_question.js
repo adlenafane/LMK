@@ -4,7 +4,7 @@ Template.askQuestion.events({
 
         var question = {
             recipient: $(e.target).find('[name=recipient]').val(),
-            question: $(e.target).find('[name=question]').val(),
+            question: $(e.target).find('[name=question]').val()
         };
 
         Meteor.call('question', question, function(error, id) {

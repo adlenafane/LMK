@@ -21,10 +21,8 @@ Meteor.methods({
             author: user.emails[0]['address'],
             submitted: new Date().getTime(),
             answersCount: 0
-        })
+        });
 
-        var questionId = Questions.insert(question);
-
-        return questionId;
+        return Questions.insert(question);
     }
 });

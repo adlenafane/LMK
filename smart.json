@@ -1,7 +1,9 @@
 {
+  "meteor": {},
   "packages": {
-    "accounts-ui-bootstrap-dropdown": {},
     "iron-router": {},
+    "accounts-ui-bootstrap-3": {},
+    "bootstrap-3": {},
     "spin": {},
     "moment": {}
   }

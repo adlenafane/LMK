@@ -31,20 +31,6 @@ a:hover {
      text-decoration:none;
 }
 
-/** Navbar **/
-.navbar { margin-bottom: 10px }
-    .navbar .navbar-inner {
-        border-radius: 0px 0px 3px 3px;
-    }
-        .dropdown-menu span {
-            display: block;
-            padding: 3px 20px;
-            clear: both;
-            line-height: 20px;
-            color: #bbb;
-            white-space: nowrap;
-        }
-
 /** Questions **/
 .question, .answer {
     *zoom: 1;
@@ -90,7 +76,7 @@ a:hover {
     margin-top: 7px;
 }
 
-/** Anwers **/
+/** Answers **/
 .answers {
     list-style-type: none;
     margin: 0;

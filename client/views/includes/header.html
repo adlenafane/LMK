@@ -1,17 +1,16 @@
 <template name="header">
-    <header class="navbar">
-        <div class="navbar-inner">
-            <a class="brand" href="{{ pathFor 'questionsList'}}">Let Me Know!</a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                  {{#if currentUser}}<li class="{{ activeRouteClass 'askedQuestions' }}"><a href="{{pathFor 'askedQuestions'}}">Asked</a></li> {{/if}}
-                  {{#if currentUser}}<li class="{{ activeRouteClass 'askQuestion' }}"><a href="{{pathFor 'askQuestion'}}">Ask</a></li> {{/if}}
-                </ul>
-            <ul class="nav pull-right">
-                <li>{{loginButtons}}</li>
+    <header class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ pathFor 'questionsList'}}">Let Me Know!</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {{#if currentUser}}<li class="{{ activeRouteClass 'askedQuestions' }}"><a href="{{pathFor 'askedQuestions'}}">Asked</a></li>{{/if}}
+                {{#if currentUser}}<li class="{{ activeRouteClass 'askQuestion' }}"><a href="{{pathFor 'askQuestion'}}">Ask</a></li> {{/if}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {{> loginButtons }}
             </ul>
         </div>
-        </div>
-      </div>
     </header>
 </template>
