@@ -19,6 +19,7 @@ Template.header.events({
                     if (error) {
                         return alert(error);
                     }
+                    Meteor.call('sendInvitationEmail', contact);
 
                     Router.go('questionsList');
                 })
