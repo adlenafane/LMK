@@ -16,3 +16,12 @@ Template.askQuestion.events({
         });
     }
 });
+
+Template.askQuestion.created = function() {
+    Meteor.call('getContactsEmail', function(error, contacts) {
+        if (error) {
+            return null;
+        }
+        $("#recipient").typeahead({ source: contacts });
+    });
+};
