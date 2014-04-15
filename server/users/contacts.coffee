@@ -4,14 +4,15 @@ Meteor.methods
 
     return contactsId.map (contactId) ->
       user = Meteor.users.findOne _id: contactId
-      return user != null ? user.emails[0].address : ''
+      return (if user? then user.emails[0].address else '')
 
   getContactId: (contactEmail) ->
     contactsId = Meteor.user().validatedContacts or []
-    contactFoundId = []
+    contactFoundId = ""
 
     contactsId.forEach (contactId) ->
       contactFoundEmail = Meteor.users.findOne( _id: contactId ).emails[0].address;
       if contactEmail == contactFoundEmail
         contactFoundId = contactId
+      return
     return contactFoundId

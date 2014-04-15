@@ -1,4 +1,4 @@
-Answers = new Meteor.Collection 'answers'
+@Answers = new Meteor.Collection 'answers'
 
 Meteor.methods
   answer: (answerAttributes) ->

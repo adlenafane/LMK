@@ -1,13 +1,13 @@
-Meteor.publish 'questions', ->
-  return Questions.find
-    $or: [
-      {
-        authorId: @userId
-      }
-      {
-        recipientId: this.userId
-      }
-    ]
+Meteor.publish "questions", ->
+  return Questions.find $or: [
+    {
+      authorId: @userId
+    }
+    {
+      recipientId: @userId
+    }
+  ]
 
-Meteor.publish 'answers', (questionId) ->
-    return Answers.find questionId: questionId
+Meteor.publish "answers", (questionId) ->
+  return Answers.find
+    questionId: questionId

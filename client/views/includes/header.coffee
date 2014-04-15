@@ -1,6 +1,6 @@
 Template.header.helpers
-  activeRouteClass: ->
-    args = Array.prototype.slice.call arguments_, 0
+  activeRouteClass: (args...) ->
+    args = args.slice 0
     args.pop()
     active = _.any args, (name) ->
       return Router.current().route.name == name

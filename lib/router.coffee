@@ -22,7 +22,7 @@ Router.map ->
 
   @route 'questionPage',
     path: '/questions/:_id'
-    waitOn:
+    waitOn: ->
       Meteor.subscribe 'answers', @params._id
     data: ->
       Questions.findOne @params._id
@@ -39,14 +39,14 @@ requireLogin = ->
     if Meteor.loggingIn()
       @render @loadingTemplate
     else
-      this.render 'accessDenied'
-    this.pause()
+      @render "accessDenied"
+    @pause()
+  return
 
 Router.onBeforeAction 'loading'
 Router.onBeforeAction requireLogin,
-  only:
-    [
-      'askQuestion',
-      'askedQuestions',
+  only: [
+      'askQuestion'
+      'askedQuestions'
       'questionPage'
     ]
