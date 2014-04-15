@@ -1,5 +1,5 @@
 Meteor.publish('questions', function() {
-    return Questions.find();
+    return Questions.find({$or: [ {authorId: this.userId}, {recipientId: this.userId}]});
 });
 
 Meteor.publish('answers', function(questionId) {
