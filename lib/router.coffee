@@ -34,6 +34,10 @@ Router.map ->
     path: '/askedQuestions'
     template: 'questionsAskedList'
 
+  @route 'contactsList',
+    path: '/contacts'
+    template: 'contactsList'
+
 requireLogin = ->
   unless Meteor.user()
     if Meteor.loggingIn()

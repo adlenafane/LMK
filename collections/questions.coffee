@@ -3,10 +3,7 @@
 Meteor.methods
   question: (questionAttributes) ->
     user = Meteor.user()
-    console.log questionAttributes.recipient
     Meteor.call('getContactId', questionAttributes.recipient, (error, recipientId) ->
-      console.log "recipient Id"
-      console.log recipientId
       throw new Meteor.Error 401, 'You need to login to ask questions' unless user
       throw new Meteor.Error 422, 'Please fill in a recipient' unless questionAttributes.recipient
       throw new Meteor.Error 422, 'Please fill in a question' unless questionAttributes.question

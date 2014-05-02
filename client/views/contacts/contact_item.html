@@ -1,0 +1,9 @@
+<template name="contactItem">
+    <div class="contact">
+        <div class="contact-content">
+            <h3><strong>{{email}}</strong></h3>
+            {{#if invited}}<div><strong>Invited</strong></div>{{/if}}
+            {{#if validated}}<div><strong>Validated</strong></div>{{/if}}
+        </div>
+    </div>
+</template>
