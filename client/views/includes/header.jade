@@ -1,0 +1,15 @@
+template(name="header")
+    header
+        nav.navbar.navbar-default(role="navigation")
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    button.navbar-toggle(type="button", data-toggle="collapse", data-target="#loginButtons")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href="/") Let Me Know!
+                .navbar-collapse.collapse#loginButtons
+                    ul.nav.navbar-nav.navbar-right
+                        +loginButtons
