@@ -1,12 +1,12 @@
 head
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 template(name="layout")
-    //if lt IE 9
-        p.browser-warning
-            strong
-                i.icon-exclamation-sign Warning - You are using an outdated browser. Please
-                    a(href="http://browsehappy.com/", target="_blank") upgrade your browser to properly view this website.
-    #main
-        +yield(region="header")
-        +yield
+  //if lt IE 9
+    p.browser-warning
+      strong
+        i.icon-exclamation-sign Warning - You are using an outdated browser. Please
+          a(href="http://browsehappy.com/", target="_blank") upgrade your browser to properly view this website.
+  #main
+    +yield(region="header")
+    +yield

@@ -1,8 +1,10 @@
 template(name="createCircle")
-  form
-    fieldset
-      .input-group
-        label.control-label(for="circle-name") Name
-        input.form-control(name="circle-name", type="text", value="", placeholder="Name of the circle")
-      .input-group
-        input.btn.btn-primary(type="submit", value="Create")
+  .container
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+        form(role="form")
+          .form-group.form-group-lg
+            label.control-label(for="circle-name") Name
+            input.form-control(name="circle-name", type="text", value="", placeholder="Name of the circle")
+          .form-group
+            input.btn.btn-primary.btn-block(type="submit", value="Create")
