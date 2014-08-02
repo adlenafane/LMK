@@ -12,4 +12,7 @@ template(name="header")
                     a.navbar-brand(href="/") Let Me Know!
                 .navbar-collapse.collapse#loginButtons
                     ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href="{{pathFor 'createCircle'}}") Add a cirle
+                                i.glyphicon.glyphicon-plus-sign
                         +loginButtons

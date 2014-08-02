@@ -9,6 +9,10 @@ Router.map ->
     path: '/'
     template: 'home'
 
+  @route 'createCircle',
+    path: '/create-circle'
+    template: 'createCircle'
+
 requireLogin = (pause) ->
   if not Meteor.user()
     if Meteor.loggingIn()
