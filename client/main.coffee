@@ -1,0 +1,1 @@
+Meteor.subscribe 'circles', Meteor.userId()

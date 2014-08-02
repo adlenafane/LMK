@@ -13,6 +13,10 @@ Router.map ->
     path: '/create-circle'
     template: 'createCircle'
 
+  @route 'circle',
+    path: '/circle'
+    template: 'circle'
+
 requireLogin = (pause) ->
   if not Meteor.user()
     if Meteor.loggingIn()
@@ -23,4 +27,4 @@ requireLogin = (pause) ->
 
 Router.onBeforeAction 'loading'
 Router.onBeforeAction requireLogin,
-  only: 'activity'
+  only: ['createCircle', 'circle']
