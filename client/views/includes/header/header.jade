@@ -14,6 +14,9 @@ template(name="header")
           ul.nav.navbar-nav.navbar-right
             if currentUser
               li
+                a(href="{{pathFor 'circles'}}") My circles
+                  i.fa.fa-circle-thin
+              li
                 a(href="{{pathFor 'createCircle'}}") Add a cirle
                   i.glyphicon.glyphicon-plus-sign
             +loginButtons

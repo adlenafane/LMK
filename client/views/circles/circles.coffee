@@ -1,3 +1,3 @@
-Template.circle.helpers
+Template.circles.helpers
   circles: Circles.find
     ownerId: Meteor.userId()

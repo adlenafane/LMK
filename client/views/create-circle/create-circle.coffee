@@ -6,6 +6,7 @@ Template.createCircle.events
 
     Meteor.call 'circle', circle, (error, id) ->
       if error then return alert(error.reason)
-      Router.go "circle"
+      Router.go "circle",
+        _id: id
 
     return

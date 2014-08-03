@@ -16,7 +16,20 @@ Meteor.methods
     circle = _.extend _.pick(circleAttributes, 'name'),
       ownerId: user._id
       owner: user.username
-      member: [user._id]
+      members: [user._id]
       created: new Date().getTime()
 
     Circles.insert circle
+
+  getMemberDetails: (circleId) ->
+    console.log "--------------------------------------------------------------"
+    console.log "circleId"
+    console.log circleId
+    circle = Circles.findOne({_id: circleId})
+    console.log "--------------------------------------------------------------"
+    console.log "circle"
+    console.log circle
+    circle?.members?.map (memberId) ->
+      Meteor.users.find({_id: memberId})
+
+    return circle.members

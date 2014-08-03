@@ -13,8 +13,13 @@ Router.map ->
     path: '/create-circle'
     template: 'createCircle'
 
+  @route 'circles',
+    path: '/circles'
+    template: 'circles'
+
   @route 'circle',
-    path: '/circle'
+    path: '/circle/:_id'
+    data: -> return Circles.findOne @params._id
     template: 'circle'
 
 requireLogin = (pause) ->
