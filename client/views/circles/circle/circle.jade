@@ -1,6 +1,15 @@
 template(name='circle')
-  h1 Circle: #{name}
-  h2 Members
-  ul
-    each members
-      li #{this}
+  .container
+    ul.nav.nav-tabs(role='tablist')
+      li.active
+        a(href="#") Activities
+      li
+        a(href="#") Members
+      li
+        a(href="#") Settings
+  .container
+    h1 Circle: #{name}
+    h2 Members
+    ul
+      each members
+        li #{this}
