@@ -1,12 +1,11 @@
 template(name='circle')
-  .container
-    ul.nav.nav-tabs(role='tablist')
-      li.active
-        a(href="#") Activities
-      li
-        a(href="#") Members
-      li
-        a(href="#") Settings
+  ul.nav.nav-tabs(role='tablist')
+    li(class="{{ activeIfRouteIs 'circleActivities' }}")
+      a(href="{{ pathFor 'circleActivities' _id=this._id }}") Activities
+    li(class="{{ activeIfRouteIs 'circleMembers' }}")
+      a(href="{{ pathFor 'circleMembers' _id=this._id }}") Members
+    li(class="{{ activeIfRouteIs 'circleSettings' }}")
+      a(href="{{ pathFor 'circleSettings' _id=this._id }}") Settings
   .container
     h1 Circle: #{name}
     h2 Members

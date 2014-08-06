@@ -19,6 +19,20 @@ Router.map ->
 
   @route 'circle',
     path: '/circle/:_id'
+    action: -> Router.go 'circleActivities', {_id: @.params._id}
+
+  @route 'circleActivities',
+    path: '/circle/:_id/activities'
+    data: -> return Circles.findOne @params._id
+    template: 'circle'
+
+  @route 'circleMembers',
+    path: '/circle/:_id/members'
+    data: -> return Circles.findOne @params._id
+    template: 'circle'
+
+  @route 'circleSettings',
+    path: '/circle/:_id/settings'
     data: -> return Circles.findOne @params._id
     template: 'circle'
 
